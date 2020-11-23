@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import android.widget.TextView;
 public class Activity2 extends AppCompatActivity {
 
 
@@ -34,6 +35,23 @@ public class Activity2 extends AppCompatActivity {
 
     }
 
+    public void effacertexte(View view){
+
+        try{
+            TextView monText = (EditText)findViewById(R.id.text2);
+
+            if(monText.getVisibility() == View.VISIBLE){
+                monText.setVisibility(View.INVISIBLE);
+            }else{
+                monText.setVisibility(View.VISIBLE);
+            }
+
+        }catch(Exception e){
+            System.out.println("Error " + e.getMessage());
+        }
+
+
+    }
 
     public void runThread(View view){
 
@@ -102,5 +120,6 @@ public class Activity2 extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Retrieved value : " + Integer.toString(retrievedInt), Toast.LENGTH_LONG).show();
     };
+
 
 }
