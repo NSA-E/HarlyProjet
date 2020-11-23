@@ -1,53 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2">
+    android:orientation="vertical" >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <EditText android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:text="Activity 2" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_margin="@android:dimen/notification_large_icon_height">
 
-        <TextView android:id="@+id/text"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Other activity" />
+            android:orientation="vertical">
 
-        <Button android:id="@+id/button1"
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="apparition/disparition du texte"
+                android:onClick="effacertexte"
+                ></Button>
+
+        </LinearLayout>
+
+
+
+        <EditText android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start thread"
-            android:onClick="runThread"/>
+            android:text="Faire disparaitre ce qui est écris ici"
+            android:layout_margin="@android:dimen/notification_large_icon_height"/>
 
-        <Button android:id="@+id/button2"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stop thread"
-            android:onClick="stopThread"/>
-
-
-        <EditText
-            android:id="@+id/myDataField"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
-
-
-        <Button android:id="@+id/buttonSaveData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save data"
-            android:onClick="saveData"/>
-
-        <Button android:id="@+id/buttonLoadData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Load data"
-            android:onClick="loadData"/>
-
+            android:text="Upload votre texte "
+            android:layout_marginLeft="30dp"
+            android:onClick="loadData"
+            ></Button>
     </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
